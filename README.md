@@ -21,3 +21,6 @@ Of course, your location doesn't have to be Georgia Tech, but I used it for my e
 
 ## Releases
 You will notice that there are two sets of releases. Each of them has the club/organization name of which the starter code was made for. Since the workshop for HackGTeeny (the original purpose for this code) is longer, the starter code in that release will have much less pre-provided code.
+
+### Which version should I use?
+If you are attending a GT WebDev session, use this [code](https://github.com/Drakodin/teeny-world/releases/tag/teeny-world-gtwd). Otherwise, use the code from the other release. GT WebDev has shorter tutorial sessions and thus more code was left in. Of course, if you are not part of Georgia Tech and you find this, go ahead and use either one. Though note the license.
