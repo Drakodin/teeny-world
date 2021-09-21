@@ -77,7 +77,11 @@ The earth image is very large. We need to bound it smaller
     fill: var(--sky-cloud);
 }
 
-/* For the modal */
+/*
+For the modal. This modal uses the "display: grid" css
+functionality which is a different way to arrange items in
+your elements.
+*/
 #info-modal {
     display: block;
     position: absolute;
