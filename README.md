@@ -18,3 +18,6 @@ Of course, your location doesn't have to be Georgia Tech, but I used it for my e
 - All index files (`.html`, `.js`, `.css`)
 - Some additional files (Some images, pre-defined css, a cool animation strategy)
 - Loads of comments
+
+## Releases
+You will notice that there are two sets of releases. Each of them has the club/organization name of which the starter code was made for. Since the workshop for HackGTeeny (the original purpose for this code) is longer, the starter code in that release will have much less pre-provided code.
