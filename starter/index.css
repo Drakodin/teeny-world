@@ -1,0 +1,177 @@
+/*
+This is the stylesheet where we will implement all of
+the things that make a website look like it's not from
+the early 2000s
+*/
+
+/* Top level, best for defining variables */
+:root {
+    --sky-blue: rgb(0, 18, 53);
+    --sky-cloud: rgba(196, 251, 255, 0.8);
+    --modal-bg: rgba(255, 255, 255, 0.8);
+}
+
+/* Styling so that the root can occupy a 100% window fill */
+html, body {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+/* This is different from :root */
+#root {
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sky-blue);
+}
+
+/*
+The earth image is very large. We need to bound it smaller.
+It should also be centered.
+*/
+.image-set {
+    display: flex;
+}
+
+/* Ways to access elements using an upper-level class */
+.location {
+    height: 66px;
+    width: 30px;
+    transition: 0.3s;
+}
+
+.location > path {
+    transform: scale(3.0) translate(-12px, -14px);
+    fill: red;
+}
+
+/*
+The location icon should pop out a little.
+How could this be done?
+*/
+.location:hover {
+    cursor: pointer;
+}
+
+/* For the earth image, we don't want it too large. We can bound it even more. */
+.earth {
+    width: 100%;
+}
+
+/* For the optional animated cloud */
+.cloud {
+    position: absolute;
+    top: 55%;
+    transform: scale(3);
+    width: 150px;
+    height: 50px;
+}
+
+.cloud-path {
+    fill: var(--sky-cloud);
+}
+
+/*
+For the modal. This modal uses the "display: grid" css
+functionality which is a different way to arrange items in
+your elements.
+*/
+#info-modal {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+    background-color: var(--modal-bg);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*
+Notice the !important. This declaration allows you to override existing style
+declarations of the same name. It becomes very useful when dealing with the
+css declaration hierarchy as well as using external stylesheets.
+*/
+.modal-hidden {
+    display: none !important;
+}
+
+/*
+A background element of the modal that makes it so that you
+cannot click on the rest of the site without closing the modal.
+
+It should take up the entire screen and center elements inside of it.
+*/
+#modal-backdrop {
+    z-index: 1;
+}
+
+/*
+This should be in the top-right corner of the modal.
+If the modal is a grid, how could we do this? Look
+further into the code for hints.
+*/
+.modal-icon {
+    padding: 10px;
+}
+
+.modal-icon:hover {
+    cursor: pointer;
+}
+
+.modal-header {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Feel free to change these how you see fit */
+.modal-header > h3 {
+    font-size: 32px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*
+The content of the modal is a paragraph element.
+It should take up as much space as it can while still
+looking nice. How can we do that? Look at the header
+for hints.
+*/
+.modal-content {
+    grid-row: 3;
+}
+
+/* As with the header, you can go wild with these */
+.modal-content > p {
+    text-align: left;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+/* Animation for the clouds. DO NOT MODIFY */
+.anim-slide {
+    animation: slide 10s infinite linear;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(-50%) scale(3);
+        opacity: 0.0;
+    }
+    50% {
+        transform: translate(75%) scale(3);
+        opacity: 1.0
+    }
+    100% {
+        transform: translate(200%) scale(3);
+        opacity: 0.0;
+    }
+}
