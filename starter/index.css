@@ -19,14 +19,12 @@ html, body {
     overflow: hidden;
 }
 
-/* This is different from :root */
+/*
+This is different from :root.
+
+This should take up the entire screen.
+*/
 #root {
-    height: 100%;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: var(--sky-blue);
 }
 
@@ -63,7 +61,7 @@ How could this be done?
     width: 100%;
 }
 
-/* For the optional animated cloud */
+/* For the animated cloud */
 .cloud {
     position: absolute;
     top: 55%;
@@ -80,17 +78,15 @@ How could this be done?
 For the modal. This modal uses the "display: grid" css
 functionality which is a different way to arrange items in
 your elements.
+
+This grid should have at least 3 columns so that we can have
+content all the way to right. This modal should also be centered
+in the wrapper
 */
 #info-modal {
     display: block;
     position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 80%;
-    background-color: var(--modal-bg);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
 }
 
 /*
@@ -107,6 +103,7 @@ A background element of the modal that makes it so that you
 cannot click on the rest of the site without closing the modal.
 
 It should take up the entire screen and center elements inside of it.
+By default, this is transparent, but it can be changed if we like.
 */
 #modal-backdrop {
     z-index: 1;
@@ -125,11 +122,12 @@ further into the code for hints.
     cursor: pointer;
 }
 
+/*
+We don't want the header to wrap awkwardly and it should
+appear clean as well.
+*/
 .modal-header {
-    grid-column: 1 / 4;
     grid-row: 2;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 /* Feel free to change these how you see fit */
@@ -156,22 +154,29 @@ for hints.
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
-/* Animation for the clouds. DO NOT MODIFY */
+/*
+Animation for the cloud
+
+This should be filled in, but also you must define
+the cloud will move.
+
+A simple movement is from left to right relative to
+the earth. There will be an issue with that you will
+notice from how the stationary cloud is declared.
+See if you can figure out what will happen so that
+we can prevent it from occurring.
+*/
 .anim-slide {
-    animation: slide 10s infinite linear;
+    display: none;
 }
 
-@keyframes slide {
-    0% {
-        transform: translate(-50%) scale(3);
-        opacity: 0.0;
-    }
-    50% {
-        transform: translate(75%) scale(3);
-        opacity: 1.0
-    }
-    100% {
-        transform: translate(200%) scale(3);
-        opacity: 0.0;
-    }
+/*
+This is the backbone of a CSS animation declaration.
+You can use the name animate or change it how you see fit.
+
+There are multiple ways to define how an animation will flow
+from timestamps to percent to completion.
+*/
+@keyframes animate {
+
 }
