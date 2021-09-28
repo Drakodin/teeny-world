@@ -24,3 +24,10 @@ You will notice that there are two sets of releases. Each of them has the club/o
 
 ### Which version should I use?
 If you are attending a GT WebDev session, use this [code](https://github.com/Drakodin/teeny-world/releases/tag/teeny-world-gtwd). Otherwise, use the code from the other release. GT WebDev has shorter tutorial sessions and thus more code was left in. Of course, if you are not part of Georgia Tech and you find this, go ahead and use either one. Though note the license.
+
+## HackGTeeny 2021
+Hey everyone, I'm so sorry I rushed that presentation day of, especially in the JS section. I didn't really anticipate as many questions and problems with the repository (plus I should have had everyone download the repo beforehand!).
+
+Anyway, here are links to all of my materials I used:
+- [Slides](https://docs.google.com/presentation/d/1OWR0KaKJlFV8OkIKN38vdQ1srlfFU77Bf0uYjWOEcjc/edit?usp=sharing)
+- [Repl.it](https://replit.com/@Drakodin/TeenyTutorial)
